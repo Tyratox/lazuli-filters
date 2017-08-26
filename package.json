@@ -11,10 +11,7 @@
 		"type": "git",
 		"url": "https://github.com/tyratox/lazuli-filters.git"
 	},
-	"keywords": [
-		"lazuli",
-		"filters"
-	],
+	"keywords": ["lazuli", "filters"],
 	"author": "Nico Hauser",
 	"contributors": [
 		{
@@ -37,9 +34,7 @@
 		"jsdoc": "^3.5.4"
 	},
 	"ava": {
-		"require": [
-			"babel-register"
-		],
+		"require": ["babel-register"],
 		"babel": "inherit"
 	}
 }
