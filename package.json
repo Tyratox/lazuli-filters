@@ -33,6 +33,7 @@
 		"ava": "^0.22.0",
 		"babel-core": "^6.26.0",
 		"babel-preset-env": "^1.6.0",
+		"babel-register": "^6.26.0",
 		"jsdoc": "^3.5.4"
 	},
 	"ava": {
