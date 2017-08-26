@@ -5,7 +5,7 @@
 	"main": "src/lazuli-filters.mjs",
 	"scripts": {
 		"docs": "jsdoc src -r -c jsdoc.json -R README.md -d docs",
-		"test": "mocha --compilers js:babel-core/register --recursive",
+		"test": "mocha --compilers js:babel-core/register --recursive"
 	},
 	"repository": {
 		"type": "git",
@@ -26,6 +26,12 @@
 	},
 	"homepage": "https://lazuli.tyratox.ch",
 	"dependencies": {},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.0",
+		"mocha": "^3.5.0",
+		"jsdoc": "^3.5.4"
+	},
 	"babel": {
 		"presets": [
 			[
@@ -37,11 +43,5 @@
 				}
 			]
 		]
-	},
-	"devDependencies": {
-		"babel-core": "^6.26.0",
-		"babel-preset-env": "^1.6.0",
-		"mocha": "^3.5.0",
-		"jsdoc": "^3.5.4"
 	}
 }
