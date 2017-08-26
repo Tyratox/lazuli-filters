@@ -1,0 +1,48 @@
+{
+	"name": "lazuli-filters",
+	"version": "1.0.0",
+	"description": "Provides wordpress-like filter functionality",
+	"main": "src/lazuli-filters.mjs",
+	"scripts": {
+		"docs": "jsdoc src -r -c jsdoc.json -R README.md -d docs",
+		"test": "mocha --compilers js:babel-core/register --recursive",
+		"coverage": "istanbul cover _mocha -- --compilers js:babel-register"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tyratox/lazuli-filters.git"
+	},
+	"keywords": ["lazuli", "filters"],
+	"author": "Nico Hauser",
+	"contributors": [
+		{
+			"name": "Nico Hauser",
+			"email": "me@tyratox.ch",
+			"url": "https://tyratox.ch"
+		}
+	],
+	"license": "UNLICENSED",
+	"bugs": {
+		"url": "https://github.com/tyratox/lazuli-filters/issues"
+	},
+	"homepage": "https://lazuli.tyratox.ch",
+	"dependencies": {},
+	"babel": {
+		"presets": [
+			[
+				"env",
+				{
+					"targets": {
+						"node": "7"
+					}
+				}
+			]
+		]
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.0",
+		"mocha": "^3.5.0",
+		"jsdoc": "^3.5.4"
+	}
+}
