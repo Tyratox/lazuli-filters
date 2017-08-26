@@ -5,13 +5,16 @@
 	"main": "src/lazuli-filters.mjs",
 	"scripts": {
 		"docs": "jsdoc src -r -c jsdoc.json -R README.md -d docs",
-		"test": "mocha --compilers js:babel-core/register --recursive"
+		"test": "ava"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/tyratox/lazuli-filters.git"
 	},
-	"keywords": ["lazuli", "filters"],
+	"keywords": [
+		"lazuli",
+		"filters"
+	],
 	"author": "Nico Hauser",
 	"contributors": [
 		{
@@ -27,21 +30,15 @@
 	"homepage": "https://lazuli.tyratox.ch",
 	"dependencies": {},
 	"devDependencies": {
+		"ava": "^0.22.0",
 		"babel-core": "^6.26.0",
 		"babel-preset-env": "^1.6.0",
-		"mocha": "^3.5.0",
 		"jsdoc": "^3.5.4"
 	},
-	"babel": {
-		"presets": [
-			[
-				"env",
-				{
-					"targets": {
-						"node": "7"
-					}
-				}
-			]
-		]
+	"ava": {
+		"require": [
+			"babel-register"
+		],
+		"babel": "inherit"
 	}
 }
