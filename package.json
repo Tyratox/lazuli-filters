@@ -6,7 +6,6 @@
 	"scripts": {
 		"docs": "jsdoc src -r -c jsdoc.json -R README.md -d docs",
 		"test": "mocha --compilers js:babel-core/register --recursive",
-		"coverage": "istanbul cover _mocha -- --compilers js:babel-register"
 	},
 	"repository": {
 		"type": "git",
