@@ -75,4 +75,4 @@ ValueFilter.prototype.filterable = function(name, value) {
 	return value;
 };
 
-export default ValueFilter;
+module.exports = ValueFilter;

@@ -1,5 +1,5 @@
 import test from "ava";
-import ValueFilter from "../src/lazuli-filters.mjs";
+const ValueFilter = require("../src/lazuli-filters.js");
 
 test("ValueFilter.get() should get the complete filter map", t => {
 	let valueFilter = new ValueFilter();

@@ -2,7 +2,7 @@
 	"name": "lazuli-filters",
 	"version": "1.0.0",
 	"description": "Provides wordpress-like filter functionality",
-	"main": "src/lazuli-filters.mjs",
+	"main": "src/lazuli-filters.js",
 	"scripts": {
 		"docs": "jsdoc src -r -c jsdoc.json -R README.md -d docs",
 		"test": "ava"
