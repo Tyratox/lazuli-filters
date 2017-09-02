@@ -34,3 +34,19 @@ test("ValueFilter.filterable() should filter the value with all relevant filters
 	valueFilter._filters = { filter: [fn, fn2] };
 	t.deepEqual(valueFilter.filterable("filter", 0), 2); //0 => 1 => 2
 });
+test("ValueFilter.filterable() should be able to pass additional arguments to the filters", t => {
+	let valueFilter = new ValueFilter();
+	const fn = (x, param1, param2, param3) => param3;
+
+	valueFilter._filters = { filter: [fn] };
+	t.deepEqual(
+		valueFilter.filterable(
+			"filter",
+			0,
+			"helpfulParameter1",
+			"helpfulParameter2",
+			"helpfulParameter3"
+		),
+		"helpfulParameter3"
+	);
+});
