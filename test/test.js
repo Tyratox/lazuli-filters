@@ -50,3 +50,25 @@ test("ValueFilter.filterable() should be able to pass additional arguments to th
 		"helpfulParameter3"
 	);
 });
+
+test("ValueFilter.filterable() should respect the optional context", t => {
+	let valueFilter = new ValueFilter();
+
+	class Filter {
+		constructor(val) {
+			this.val = val;
+		}
+	}
+	Filter.prototype.fn = function(val) {
+		return val * this.val;
+	};
+
+	let f1 = new Filter(2),
+		f2 = new Filter(10);
+
+	valueFilter._filters = { filter: [f1.fn.bind(f1), f2.fn.bind(f2)] };
+
+	t.deepEqual(f1.fn(7), 14);
+	t.deepEqual(f2.fn(14), 140);
+	t.deepEqual(valueFilter.filterable("filter", 7), 140);
+});

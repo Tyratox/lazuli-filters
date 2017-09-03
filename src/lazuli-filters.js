@@ -67,7 +67,7 @@ ValueFilter.prototype.remove = function(name, fn) {
  * @return {*}             The value after all registered filters ran
  */
 ValueFilter.prototype.filterable = function(name, value) {
-	const filters = this._filters[name];
+	const filters = name in this._filters ? this._filters[name] : [];
 	const offset = 2;
 
 	let args = [];
@@ -75,7 +75,7 @@ ValueFilter.prototype.filterable = function(name, value) {
 		args[i - offset] = arguments[i];
 
 	for (let i = 0; i < filters.length; i++) {
-		value = filters[i].apply(this, [value, ...args]);
+		value = filters[i].apply(null, [value, ...args]);
 	}
 
 	return value;
