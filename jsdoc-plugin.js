@@ -38,9 +38,11 @@ exports.handlers = {
 						<tr><th>Name</th><th>Type</th><th>Description</th></tr>
 					</thead>
 					<tbody>
-						${filterable.map(({ name, type, description }) => {
-							return `<tr><td>${name}</td><td>${type}</td><td>${description}</td></tr>`;
-						})}
+						${filterable
+							.map(({ name, type, description }) => {
+								return `<tr><td>${name}</td><td>${type}</td><td>${description}</td></tr>`;
+							})
+							.join("")}
 					</tbody>
 				</table>`;
 		}
